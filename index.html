@@ -40,7 +40,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #9c27b0, #ba68c8);
+            background: linear-gradient(90deg, #9c27b0, #ba6c8c);
         }
 
         /* 头像+标题区域 - 居中对称设计 */
@@ -91,7 +91,7 @@
             font-weight: 600;
             margin: 30px 0 15px 0;
             padding-left: 10px;
-            border-left: 3px solid #ba68c8;
+            border-left: 3px solid #ba6c8c;
         }
 
         /* 操作注意事项样式 - 优化排版 */
@@ -105,31 +105,7 @@
             border: 1px solid #f3e5f5;
             margin-bottom: 15px;
             text-align: left;
-        }
-
-        .operation-note .note-title {
-            font-weight: 600;
-            color: #9c27b0;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .operation-note .step {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .operation-note .step::before {
-            content: "•";
-            color: #ba68c8;
-            margin-right: 8px;
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
-
-        .operation-note .step:last-child {
-            margin-bottom: 0;
+            white-space: pre-line;
         }
 
         /* 下载按钮样式 - 仅边框版 */
@@ -181,13 +157,13 @@
 
         /* 重点按钮样式（主要使用的地址/粉丝群） */
         .link-item.main {
-            background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%);
+            background: linear-gradient(135deg, #9c27b0 0%, #ba6c8c 100%);
             color: #ffffff;
             border-color: #9c27b0;
         }
 
         .link-item.main:hover {
-            background: linear-gradient(135deg, #8e24aa 0%, #ab47bc 100%);
+            background: linear-gradient(135deg, #8e24aa 0%, #ab4bc8 100%);
             border-color: #8e24aa;
         }
 
@@ -356,18 +332,10 @@
 
         <!-- 其他类似网站 -->
         <h3 class="category-title">🌐 其他可用地址</h3>
-        <!-- 操作注意事项 - 优化排版 -->
+        <!-- 操作注意事项 - 完全按你要的排版 -->
         <div class="operation-note">
-            <span class="note-title">操作注意事项：</span>
-            <div class="step">打开 AppStore</div>
-            <div class="step">点击 头像 -> 底部 退出登录</div>
-            <div class="step">复制 共享账号密码 登录</div>
-            <div class="step">点击 “其他选项-不升级”</div>
-            <div class="step">
-                搜索并下载：
-                <a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" class="download-btn">Shadowrocket下载</a>
-            </div>
-            <div class="step">用完务必 退出登录 防止锁机</div>
+操作注意事项：
+打开 AppStore→点击 头像 -> 底部 退出登录→复制 共享账号密码 登录→点击 “其他选项-不升级”→搜索并下载：<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" class="download-btn">Shadowrocket下载</a>→用完务必“退出登录”防止锁机
         </div>
         <div class="link-list">
             <a href="https://id.jincaii.com" target="_blank" class="link-item">备用地址1</a>
