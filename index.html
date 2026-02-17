@@ -49,7 +49,7 @@
             margin-bottom: 40px;
         }
 
-        /* 圆形头像 - 更精致的样式 */
+        /* 圆形头像 - 替换为指定图片 */
         .avatar {
             width: 80px;
             height: 80px;
@@ -58,13 +58,7 @@
             border: 3px solid #f3e5f5;
             box-shadow: 0 4px 12px rgba(156, 39, 176, 0.1);
             object-fit: cover;
-            /* 用通用紫色图标替代原有头像，保持风格统一 */
-            background: linear-gradient(135deg, #9c27b0, #ba68c8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 30px;
+            display: block; /* 确保图片正确显示 */
         }
 
         /* 标题层级 - 更舒适的字号和间距 */
@@ -120,7 +114,7 @@
             font-size: 16px;
             font-weight: 500;
             border: 1px solid #e1bee7;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 修复过渡时间单位 */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
@@ -146,7 +140,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(156, 39, 176, 0.08), transparent);
-            transition: left 0.6s ease; /* 修复过渡时间单位 */
+            transition: left 0.6s ease;
         }
 
         .link-item:hover {
@@ -164,7 +158,7 @@
             left: 100%;
         }
 
-        /* 优惠码样式 */
+        /* 优惠码样式 - 可复制版本 */
         .coupon-box {
             text-align: center;
             padding: 20px;
@@ -185,19 +179,33 @@
             color: #9c27b0;
             font-weight: 700;
             letter-spacing: 2px;
+            cursor: pointer; /* 鼠标指针样式 */
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            border: 1px solid #e1bee7;
+            display: inline-block;
+            transition: all 0.2s ease;
         }
 
-        /* 页脚 - 更低调的样式 */
-        .footer {
-            text-align: center;
+        .coupon-code:hover {
+            background-color: #f3e5f5;
+            border-color: #ce93d8;
+        }
+
+        .copy-tip {
             font-size: 12px;
-            color: #bbbbbb;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #f8f0fa;
+            color: #6a1b9a;
+            margin-top: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        /* 新增：推荐说明文字样式 */
+        .copy-tip.show {
+            opacity: 1;
+        }
+
+        /* 推荐说明文字样式 */
         .link-desc {
             text-align: center;
             font-size: 12px;
@@ -210,13 +218,23 @@
             border: 1px solid #f3e5f5;
         }
 
-        /* 新增：链接备注样式（密码提示） */
+        /* 链接备注样式（密码提示） */
         .link-note {
             font-size: 11px;
             color: #9c27b0;
             margin-top: 4px;
             text-align: center;
             font-style: italic;
+        }
+
+        /* 页脚 - 更低调的样式 */
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #bbbbbb;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #f8f0fa;
         }
 
         /* 手机端适配 - 更贴心的调整 */
@@ -227,7 +245,6 @@
             .avatar {
                 width: 70px;
                 height: 70px;
-                font-size: 25px;
             }
             .main-title {
                 font-size: 22px;
@@ -248,15 +265,15 @@
 </head>
 <body>
     <div class="card">
-        <!-- 头部区域 -->
+        <!-- 头部区域 - 替换为指定头像 -->
         <div class="header">
-            <div class="avatar">📱</div>
+            <img src="https://i2.qyimage.store:2999/i/bbae75fed77149fe" alt="头像" class="avatar">
             <h1 class="main-title">iOS小火箭美区免费ID</h1>
             <h2 class="sub-title">资源汇总 · 安全可用</h2>
             <p class="desc-text">精选可靠地址 | 优惠购买渠道 | 详细教程指引 </p>
         </div>
 
-        <!-- 新增：低价魔法推荐 -->
+        <!-- 低价魔法推荐 -->
         <h3 class="category-title">💎 超值推荐</h3>
         <div class="link-list">
             <a href="https://link.wdyserver.com/register?code=C5FAqoxQ" target="_blank" class="link-item main">低价魔法推荐</a>
@@ -299,7 +316,7 @@
             <a href="https://www.yuque.com/u22214150/tc3ykg/vlt36mvd0z421et2?#" target="_blank" class="link-item">美区ID注册详细教程</a>
         </div>
 
-        <!-- 新增：ios小火箭之家 -->
+        <!-- iOS小火箭之家 -->
         <h3 class="category-title">🚀 iOS小火箭之家</h3>
         <div class="link-list">
             <a href="https://lowertop.dpdns.org/" target="_blank" class="link-item">小火箭配置文件/模块/规则/脚本/主题</a>
@@ -319,10 +336,11 @@
             <a href="https://universalbus.cn/?s=9s0Ppp7tgR" target="_blank" class="link-item">ID成品号购买渠道</a>
         </div>
 
-        <!-- 优惠码 -->
+        <!-- 优惠码 - 可复制版本 -->
         <div class="coupon-box">
             <div class="coupon-title">小姬专属优惠码</div>
-            <div class="coupon-code">JBKSLE</div>
+            <div class="coupon-code" id="couponCode">JBKSLE</div>
+            <div class="copy-tip" id="copyTip">✅ 复制成功！</div>
             <div class="coupon-title" style="margin-top: 8px; font-size: 13px;">下单立享9折优惠 ✨</div>
         </div>
 
@@ -331,5 +349,38 @@
             小姬资源 | 仅供学习交流使用 | 收藏备用不迷路
         </div>
     </div>
+
+    <!-- 复制功能脚本 -->
+    <script>
+        // 获取元素
+        const couponCode = document.getElementById('couponCode');
+        const copyTip = document.getElementById('copyTip');
+
+        // 复制优惠码函数
+        function copyToClipboard() {
+            // 创建临时文本区域
+            const tempInput = document.createElement('input');
+            tempInput.value = couponCode.textContent;
+            document.body.appendChild(tempInput);
+            
+            // 选中并复制
+            tempInput.select();
+            document.execCommand('copy');
+            
+            // 移除临时元素
+            document.body.removeChild(tempInput);
+            
+            // 显示复制成功提示
+            copyTip.classList.add('show');
+            
+            // 3秒后隐藏提示
+            setTimeout(() => {
+                copyTip.classList.remove('show');
+            }, 3000);
+        }
+
+        // 绑定点击事件
+        couponCode.addEventListener('click', copyToClipboard);
+    </script>
 </body>
 </html>
