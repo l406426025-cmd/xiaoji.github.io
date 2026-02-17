@@ -58,7 +58,7 @@
             border: 3px solid #f3e5f5;
             box-shadow: 0 4px 12px rgba(156, 39, 176, 0.1);
             object-fit: cover;
-            display: block; /* 确保图片正确显示 */
+            display: block;
         }
 
         /* 标题层级 - 更舒适的字号和间距 */
@@ -132,12 +132,12 @@
             margin-bottom: 0;
         }
 
-        /* 下载按钮样式 */
+        /* 下载按钮样式 - 浅色柔和版 */
         .download-btn {
             display: inline-block;
             padding: 6px 12px;
-            background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%);
-            color: #ffffff;
+            background: #d1c4e9;
+            color: #6a1b9a;
             border-radius: 6px;
             text-decoration: none;
             font-size: 11px;
@@ -149,9 +149,8 @@
         }
 
         .download-btn:hover {
-            background: linear-gradient(135deg, #8e24aa 0%, #ab47bc 100%);
+            background: #c1b4d9;
             transform: translateY(-1px);
-            box-shadow: 0 2px 6px rgba(156, 39, 176, 0.15);
         }
 
         /* 链接列表 - 更现代的按钮样式 */
@@ -239,7 +238,7 @@
             color: #9c27b0;
             font-weight: 700;
             letter-spacing: 2px;
-            cursor: pointer; /* 鼠标指针样式 */
+            cursor: pointer;
             padding: 8px 16px;
             border-radius: 8px;
             background-color: #ffffff;
@@ -433,34 +432,23 @@
 
     <!-- 复制功能脚本 -->
     <script>
-        // 获取元素
         const couponCode = document.getElementById('couponCode');
         const copyTip = document.getElementById('copyTip');
 
-        // 复制优惠码函数
         function copyToClipboard() {
-            // 创建临时文本区域
             const tempInput = document.createElement('input');
             tempInput.value = couponCode.textContent;
             document.body.appendChild(tempInput);
-            
-            // 选中并复制
             tempInput.select();
             document.execCommand('copy');
-            
-            // 移除临时元素
             document.body.removeChild(tempInput);
             
-            // 显示复制成功提示
             copyTip.classList.add('show');
-            
-            // 3秒后隐藏提示
             setTimeout(() => {
                 copyTip.classList.remove('show');
             }, 3000);
         }
 
-        // 绑定点击事件
         couponCode.addEventListener('click', copyToClipboard);
     </script>
 </body>
