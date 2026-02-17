@@ -120,7 +120,7 @@
             font-size: 16px;
             font-weight: 500;
             border: 1px solid #e1bee7;
-            transition: all 0.3 cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 修复过渡时间单位 */
             position: relative;
             overflow: hidden;
         }
@@ -146,7 +146,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(156, 39, 176, 0.08), transparent);
-            transition: left 0.6 ease;
+            transition: left 0.6s ease; /* 修复过渡时间单位 */
         }
 
         .link-item:hover {
@@ -197,6 +197,28 @@
             border-top: 1px solid #f8f0fa;
         }
 
+        /* 新增：推荐说明文字样式 */
+        .link-desc {
+            text-align: center;
+            font-size: 12px;
+            color: #7b1fa2;
+            margin-top: 8px;
+            line-height: 1.4;
+            padding: 8px 12px;
+            background-color: #fef7fb;
+            border-radius: 8px;
+            border: 1px solid #f3e5f5;
+        }
+
+        /* 新增：链接备注样式（密码提示） */
+        .link-note {
+            font-size: 11px;
+            color: #9c27b0;
+            margin-top: 4px;
+            text-align: center;
+            font-style: italic;
+        }
+
         /* 手机端适配 - 更贴心的调整 */
         @media (max-width: 450px) {
             .card {
@@ -217,6 +239,10 @@
             .coupon-code {
                 font-size: 18px;
             }
+            .link-desc {
+                font-size: 11px;
+                padding: 6px 10px;
+            }
         }
     </style>
 </head>
@@ -229,6 +255,13 @@
             <h2 class="sub-title">资源汇总 · 安全可用</h2>
             <p class="desc-text">精选可靠地址 | 优惠购买渠道 | 详细教程指引 </p>
         </div>
+
+        <!-- 新增：低价魔法推荐 -->
+        <h3 class="category-title">💎 超值推荐</h3>
+        <div class="link-list">
+            <a href="https://link.wdyserver.com/register?code=C5FAqoxQ" target="_blank" class="link-item main">低价魔法推荐</a>
+        </div>
+        <div class="link-desc">3年老魔法，新加坡团队合法运营，13.9每月，每月150G大流量，五台设备同时在线。</div>
 
         <!-- 主要使用的地址 -->
         <h3 class="category-title">🔰 主要使用地址</h3>
@@ -247,6 +280,16 @@
             <a href="https://ios.juzixp.com/" target="_blank" class="link-item">备用地址6</a>
             <a href="https://applc.cc/h/888" target="_blank" class="link-item">备用地址7</a>
             <a href="https://id.meiquid.top" target="_blank" class="link-item">备用地址8</a>
+            <a href="https://66fk.top/" target="_blank" class="link-item">备用地址9</a>
+            <a href="https://proxy6.zzux.com" target="_blank" class="link-item">备用地址10</a>
+            <a href="https://da1ph.sha.cx/38804d38dd8e2c1854ee10ee31e266ef" target="_blank" class="link-item">备用地址11</a>
+            <a href="https://a.c98.eu/" target="_blank" class="link-item">备用地址12</a>
+            <a href="https://j31ov.sha.cx/7fbd6dc56973544e8a8a4ee23a9b0ec4" target="_blank" class="link-item">备用地址13</a>
+            <a href="https://l2666.sha.cx/6a818d05ae2377503af263e877e1a91e" target="_blank" class="link-item">备用地址14</a>
+            <a href="https://api.applefreeid.com/share/TcLhOgqskI" target="_blank" class="link-item">备用地址15</a>
+            <div class="link-note">备用地址15密码：123666</div>
+            <a href="https://ccbaohe.com/appleID/" target="_blank" class="link-item">备用地址16</a>
+            <a href="https://idusr.com" target="_blank" class="link-item">备用地址17</a>
         </div>
 
         <!-- 视频教程+注册教程 -->
@@ -256,11 +299,18 @@
             <a href="https://www.yuque.com/u22214150/tc3ykg/vlt36mvd0z421et2?#" target="_blank" class="link-item">美区ID注册详细教程</a>
         </div>
 
+        <!-- 新增：ios小火箭之家 -->
+        <h3 class="category-title">🚀 iOS小火箭之家</h3>
+        <div class="link-list">
+            <a href="https://lowertop.dpdns.org/" target="_blank" class="link-item">小火箭配置文件/模块/规则/脚本/主题</a>
+            <a href="https://lowertop.github.io/Shadowrocket/" target="_blank" class="link-item">最完善小火箭使用手册</a>
+        </div>
+
         <!-- 粉丝群 -->
         <h3 class="category-title">👥 粉丝交流群</h3>
         <div class="link-list">
             <a href="https://t.me/jbksjl" target="_blank" class="link-item main">TG粉丝群 @jbksjl</a>
-              <a href=" https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2F" target="_blank" class="link-item main">小姬资源仓库</a>
+            <a href=" https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2F" target="_blank" class="link-item main">小姬资源仓库</a>
         </div>
 
         <!-- 购买渠道 -->
