@@ -94,6 +94,33 @@
             border-left: 3px solid #ba68c8;
         }
 
+        /* 新增：操作注意事项样式 */
+        .operation-note {
+            font-size: 12px;
+            color: #7b1fa2;
+            line-height: 1.6;
+            padding: 12px 15px;
+            background-color: #fef7fb;
+            border-radius: 10px;
+            border: 1px solid #f3e5f5;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .operation-note strong {
+            color: #9c27b0;
+        }
+
+        .operation-note a {
+            color: #9c27b0;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .operation-note a:hover {
+            text-decoration: underline;
+        }
+
         /* 链接列表 - 更现代的按钮样式 */
         .link-list {
             display: flex;
@@ -185,7 +212,7 @@
             background-color: #ffffff;
             border: 1px solid #e1bee7;
             display: inline-block;
-            transition: all 0.2s ease;
+            transition: all 0.2 ease;
         }
 
         .coupon-code:hover {
@@ -198,7 +225,7 @@
             color: #6a1b9a;
             margin-top: 8px;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3 ease;
         }
 
         .copy-tip.show {
@@ -260,6 +287,10 @@
                 font-size: 11px;
                 padding: 6px 10px;
             }
+            .operation-note {
+                font-size: 11px;
+                padding: 10px 12px;
+            }
         }
     </style>
 </head>
@@ -288,6 +319,15 @@
 
         <!-- 其他类似网站 -->
         <h3 class="category-title">🌐 其他可用地址</h3>
+        <!-- 新增：操作注意事项 -->
+        <div class="operation-note">
+            <strong>操作注意事项：</strong>打开 AppStore<br>
+            点击 头像 -> 底部 退出登录<br>
+            复制 共享账号密码 登录<br>
+            点击 “其他选项-不升级”<br>
+            搜索 Shadowrocket下载 (<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank">https://apps.apple.com/us/app/shadowrocket/id932747118</a>)<br>
+            用完务必 退出登录 防止锁机
+        </div>
         <div class="link-list">
             <a href="https://id.jincaii.com" target="_blank" class="link-item">备用地址1</a>
             <a href="https://ids.ailiao.eu/" target="_blank" class="link-item">备用地址2</a>
