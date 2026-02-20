@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iOS小火箭美区免费ID | 小姬资源</title>
     <style>
-        /* 全局重置与基础样式 */
+        /* 样式保持完全不变，原封不动复制 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
         }
-
         body {
             background: linear-gradient(120deg, #f9f4fc 0%, #ffffff 100%);
             min-height: 100vh;
             padding: 30px 20px;
         }
-
-        /* 主卡片容器 - 核心视觉区 */
         .card {
             background: #ffffff;
             width: 100%;
@@ -31,8 +28,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* 顶部装饰条 - 增加精致感 */
         .card::before {
             content: "";
             position: absolute;
@@ -42,14 +37,10 @@
             height: 4px;
             background: linear-gradient(90deg, #9c27b0, #ba6c8c);
         }
-
-        /* 头像+标题区域 - 居中对称设计 */
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
-
-        /* 圆形头像 - 替换为指定图片 */
         .avatar {
             width: 80px;
             height: 80px;
@@ -60,8 +51,6 @@
             object-fit: cover;
             display: block;
         }
-
-        /* 标题层级 - 更舒适的字号和间距 */
         .main-title {
             font-size: 26px;
             color: #333333;
@@ -69,22 +58,18 @@
             margin-bottom: 6px;
             letter-spacing: 0.5px;
         }
-
         .sub-title {
             font-size: 16px;
             color: #9c27b0;
             font-weight: 500;
             margin-bottom: 8px;
         }
-
         .desc-text {
             font-size: 13px;
             color: #999999;
             font-weight: 400;
             line-height: 1.5;
         }
-
-        /* 分类标题样式 */
         .category-title {
             font-size: 18px;
             color: #6a1b9a;
@@ -93,8 +78,6 @@
             padding-left: 10px;
             border-left: 3px solid #ba6c8c;
         }
-
-        /* 操作注意事项样式 - 优化排版 */
         .operation-note {
             font-size: 12px;
             color: #7b1fa2;
@@ -107,14 +90,12 @@
             text-align: left;
             white-space: pre-line;
         }
-
-        /* 下载按钮样式 - 仅边框版 */
         .download-btn {
             display: inline-block;
             padding: 6px 12px;
-            background: #ffffff; /* 白色背景，和外层区分 */
-            color: #9c27b0; /* 紫色文字 */
-            border: 1px solid #9c27b0; /* 紫色边框 */
+            background: #ffffff;
+            color: #9c27b0;
+            border: 1px solid #9c27b0;
             border-radius: 6px;
             text-decoration: none;
             font-size: 11px;
@@ -123,21 +104,17 @@
             transition: all 0.2s ease;
             cursor: pointer;
         }
-
         .download-btn:hover {
-            background: #f3e5f5; /* hover时浅紫背景 */
-            border-color: #8e24aa; /* hover时深一点的边框 */
+            background: #f3e5f5;
+            border-color: #8e24aa;
             transform: translateY(-1px);
         }
-
-        /* 链接列表 - 更现代的按钮样式 */
         .link-list {
             display: flex;
             flex-direction: column;
             gap: 14px;
             margin-bottom: 10px;
         }
-
         .link-item {
             display: flex;
             align-items: center;
@@ -154,20 +131,15 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* 重点按钮样式（主要使用的地址/粉丝群） */
         .link-item.main {
             background: linear-gradient(135deg, #9c27b0 0%, #ba6c8c 100%);
             color: #ffffff;
             border-color: #9c27b0;
         }
-
         .link-item.main:hover {
             background: linear-gradient(135deg, #8e24aa 0%, #ab4bc8 100%);
             border-color: #8e24aa;
         }
-
-        /* 按钮hover动效 - 更高级的交互 */
         .link-item::after {
             content: "";
             position: absolute;
@@ -178,23 +150,18 @@
             background: linear-gradient(90deg, transparent, rgba(156, 39, 176, 0.08), transparent);
             transition: left 0.6s ease;
         }
-
         .link-item:hover {
             background: #faf0fc;
             border-color: #ce93d8;
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(156, 39, 176, 0.1);
         }
-
         .link-item.main:hover::after {
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
         }
-
         .link-item:hover::after {
             left: 100%;
         }
-
-        /* 优惠码样式 - 可复制版本 */
         .coupon-box {
             text-align: center;
             padding: 20px;
@@ -203,13 +170,11 @@
             border: 1px solid #e1bee7;
             margin: 15px 0 25px 0;
         }
-
         .coupon-title {
             font-size: 15px;
             color: #6a1b9a;
             margin-bottom: 8px;
         }
-
         .coupon-code {
             font-size: 20px;
             color: #9c27b0;
@@ -223,12 +188,10 @@
             display: inline-block;
             transition: all 0.2s ease;
         }
-
         .coupon-code:hover {
             background-color: #f3e5f5;
             border-color: #ce93d8;
         }
-
         .copy-tip {
             font-size: 12px;
             color: #6a1b9a;
@@ -236,12 +199,9 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .copy-tip.show {
             opacity: 1;
         }
-
-        /* 推荐说明文字样式 */
         .link-desc {
             text-align: center;
             font-size: 12px;
@@ -253,8 +213,6 @@
             border-radius: 8px;
             border: 1px solid #f3e5f5;
         }
-
-        /* 链接备注样式（密码提示） */
         .link-note {
             font-size: 11px;
             color: #9c27b0;
@@ -262,8 +220,6 @@
             text-align: center;
             font-style: italic;
         }
-
-        /* 页脚 - 更低调的样式 */
         .footer {
             text-align: center;
             font-size: 12px;
@@ -272,8 +228,6 @@
             margin-top: 20px;
             border-top: 1px solid #f8f0fa;
         }
-
-        /* 手机端适配 - 更贴心的调整 */
         @media (max-width: 450px) {
             .card {
                 padding: 35px 25px;
@@ -309,7 +263,6 @@
 </head>
 <body>
     <div class="card">
-        <!-- 头部区域 - 替换为指定头像 -->
         <div class="header">
             <img src="https://i2.qyimage.store:2999/i/bbae75fed77149fe" alt="头像" class="avatar">
             <h1 class="main-title">iOS小火箭美区免费ID</h1>
@@ -317,22 +270,18 @@
             <p class="desc-text">精选可靠地址 | 优惠购买渠道 | 详细教程指引 </p>
         </div>
 
-        <!-- 低价魔法推荐 -->
         <h3 class="category-title">💎 超值推荐</h3>
         <div class="link-list">
-            <a href="https://link.wdyserver.com/register?code=C5FAqoxQ" target="_blank" class="link-item main">低价魔法推荐</a>
+            <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fjbskleddjjctja%2F" target="_blank" class="link-item main">低价魔法推荐</a>
         </div>
         <div class="link-desc">3年老魔法，新加坡团队合法运营，13.9每月，每月150G大流量，五台设备同时在线。</div>
 
-        <!-- 主要使用的地址 -->
         <h3 class="category-title">🔰 主要使用地址</h3>
         <div class="link-list">
             <a href="https://fxapp.xyz" target="_blank" class="link-item main">主要地址（浏览器打开）</a>
         </div>
 
-        <!-- 其他类似网站 -->
         <h3 class="category-title">🌐 其他可用地址</h3>
-        <!-- 操作注意事项 - 完全按你要的排版 -->
         <div class="operation-note">
 操作注意事项：
 打开 AppStore→点击 头像 -> 底部 退出登录→复制 共享账号密码 登录→点击 “其他选项-不升级”→搜索并下载：<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" class="download-btn">Shadowrocket下载</a>→用完务必“退出登录”防止锁机
@@ -358,34 +307,37 @@
             <a href="https://idusr.com" target="_blank" class="link-item">备用地址17</a>
         </div>
 
-        <!-- 视频教程+注册教程 -->
         <h3 class="category-title">📖 教程指引</h3>
         <div class="link-list">
             <a href="https://s0.mall.tcl.com/group1/M00/00/89/CvoGBGd37jmAL0b-AE72lMZF4xc097.mp4" target="_blank" class="link-item">App Store登录ID视频教程</a>
             <a href="https://www.yuque.com/u22214150/tc3ykg/vlt36mvd0z421et2?#" target="_blank" class="link-item">美区ID注册详细教程</a>
         </div>
 
-        <!-- iOS小火箭之家 -->
         <h3 class="category-title">🚀 iOS小火箭之家</h3>
         <div class="link-list">
             <a href="https://lowertop.dpdns.org/" target="_blank" class="link-item">小火箭配置文件/模块/规则/脚本/主题</a>
             <a href="https://lowertop.github.io/Shadowrocket/" target="_blank" class="link-item">最完善小火箭使用手册</a>
         </div>
 
-        <!-- 粉丝群 -->
+        <!-- 新增部分：代理软件下载合集 & 永久订阅 -->
+        <h3 class="category-title">🛠️ 代理工具 & 免费订阅</h3>
+        <div class="link-list">
+            <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fdlrjxzjbks%2F" target="_blank" class="link-item main">代理软件下载合集</a>
+            <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fjbksdyjdyfb%2F" target="_blank" class="link-item main">小姬永久免费订阅</a>
+        </div>
+        <div class="link-desc">iOS/Android/PC全平台代理客户端下载 + 小姬长期有效免费节点订阅，一键导入Clash/Shadowrocket等使用</div>
+
         <h3 class="category-title">👥 粉丝交流群</h3>
         <div class="link-list">
             <a href="https://t.me/jbksjl" target="_blank" class="link-item main">TG粉丝群 @jbksjl</a>
-            <a href=" https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2F" target="_blank" class="link-item main">小姬资源仓库</a>
+            <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2F" target="_blank" class="link-item main">小姬资源仓库</a>
         </div>
 
-        <!-- 购买渠道 -->
         <h3 class="category-title">💳 购买渠道（专属优惠）</h3>
         <div class="link-list">
             <a href="https://universalbus.cn/?s=9s0Ppp7tgR" target="_blank" class="link-item">ID成品号购买渠道</a>
         </div>
 
-        <!-- 优惠码 - 可复制版本 -->
         <div class="coupon-box">
             <div class="coupon-title">小姬专属优惠码</div>
             <div class="coupon-code" id="couponCode">JBKSLE</div>
@@ -393,17 +345,14 @@
             <div class="coupon-title" style="margin-top: 8px; font-size: 13px;">下单立享9折优惠 ✨</div>
         </div>
 
-        <!-- 页脚 -->
         <div class="footer">
             小姬资源 | 仅供学习交流使用 | 收藏备用不迷路
         </div>
     </div>
 
-    <!-- 复制功能脚本 -->
     <script>
         const couponCode = document.getElementById('couponCode');
         const copyTip = document.getElementById('copyTip');
-
         function copyToClipboard() {
             const tempInput = document.createElement('input');
             tempInput.value = couponCode.textContent;
@@ -411,13 +360,12 @@
             tempInput.select();
             document.execCommand('copy');
             document.body.removeChild(tempInput);
-            
+           
             copyTip.classList.add('show');
             setTimeout(() => {
                 copyTip.classList.remove('show');
             }, 3000);
         }
-
         couponCode.addEventListener('click', copyToClipboard);
     </script>
 </body>
