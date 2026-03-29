@@ -36,19 +36,19 @@
             color: var(--text-main);
             min-height: 100vh;
             padding: 30px 20px;
-            transition: background 0.4 ease;
+            transition: background 0.4s ease;
         }
         .card {
             background: var(--card-bg);
             width: 100%;
-            max-width: 600px;
+            max-width: 620px;
             border-radius: 20px;
             box-shadow: 0 8px 32px var(--shadow);
             padding: 45px 35px;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
-            transition: all 0.4 ease;
+            transition: all 0.4s ease;
         }
         .card::before {
             content: "";
@@ -66,8 +66,8 @@
         }
         .theme-toggle {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 10px;
+            right: 10px;
             background: none;
             border: 2px solid var(--text-sub);
             color: var(--text-sub);
@@ -79,7 +79,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3 ease;
+            transition: all 0.3s ease;
+            z-index: 10;
         }
         .theme-toggle:hover {
             background: var(--text-sub);
@@ -101,7 +102,6 @@
             color: var(--text-main);
             font-weight: 600;
             margin-bottom: 6px;
-            letter-spacing: 0.5px;
         }
         .sub-title {
             font-size: 16px;
@@ -112,7 +112,6 @@
         .desc-text {
             font-size: 13px;
             color: var(--text-desc);
-            font-weight: 400;
             line-height: 1.5;
         }
         .category-title {
@@ -161,7 +160,7 @@
             font-size: 16px;
             font-weight: 500;
             border: 1px solid var(--border-light);
-            transition: all 0.3 cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .link-item.main {
             background: linear-gradient(135deg, #9c27b0 0%, #ba6c8c 100%);
@@ -203,9 +202,20 @@
             background-color: var(--card-bg);
             border: 1px solid #e1bee7;
             display: inline-block;
+            transition: all 0.2s ease;
         }
         [data-theme="dark"] .coupon-code {
             color: #e0bbff;
+        }
+        .copy-tip {
+            font-size: 12px;
+            color: #6a1b9a;
+            margin-top: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .copy-tip.show {
+            opacity: 1;
         }
         .footer {
             text-align: center;
@@ -219,12 +229,10 @@
             color: #6b7280;
             border-top-color: #374151;
         }
-        /* 其他原有样式保持一致（省略部分与之前相同，可直接使用） */
         @media (max-width: 450px) {
             .card { padding: 35px 25px; }
             .avatar { width: 70px; height: 70px; }
             .main-title { font-size: 22px; }
-            .link-item { padding: 16px 18px; font-size: 15px; }
         }
         .modal {
             position: fixed;
@@ -251,18 +259,54 @@
         [data-theme="dark"] .modal-content {
             color: #e5e7eb;
         }
+        .modal-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+        .modal-btn {
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 180px;
+        }
+        #agree {
+            background-color: #9c27b0;
+            color: white;
+        }
+        #agree:hover {
+            background-color: #7b1fa2;
+        }
+        #disagree {
+            background-color: #ef5350;
+            color: white;
+        }
+        #disagree:hover {
+            background-color: #d32f2f;
+        }
     </style>
 </head>
 <body>
-    <!-- 免责弹窗（保持不变） -->
+    <!-- 重要免责弹窗（完全保持你原来的样式和按钮） -->
     <div class="modal" id="disclaimerModal">
         <div class="modal-content">
             <h2>重要免责声明（必须阅读）</h2>
             <p>1. 本页面提供的Apple ID共享信息、下载指引、链接等内容均来源于互联网公开渠道，<strong>仅供个人学习、技术测试、资料查阅之用，不构成任何账号交易、服务提供或使用推荐</strong>。</p>
+           
             <p>2. 本人<strong>不运营、不销售、不代理、不维护</strong>任何Apple ID、代理工具、翻墙软件或相关服务，<strong>未从中获取任何经济利益</strong>，也<strong>不参与任何形式的商业推广或盈利行为</strong>。</p>
+           
             <p>3. 中华人民共和国法律法规明确禁止未经许可提供、传播、销售翻墙工具、国际联网代理服务、共享账号绕过地区限制等行为。本人<strong>强烈反对、坚决不鼓励、不支持</strong>任何违反中国法律法规的行为。</p>
+           
             <p>4. 共享Apple ID存在锁机、封号、隐私泄露等重大风险。访问者必须自行判断所有信息的合法性、安全性及可用性，并<strong>严格遵守所在地全部法律法规</strong>。</p>
+           
             <p>5. 任何因登录、使用、下载、导入本页面提供的ID、软件、链接而产生的法律责任、行政处罚、经济损失、账号异常、设备损坏、个人信息泄露或其他任何后果，<strong>全部由使用者本人自行承担，与本页面及维护者完全无关</strong>。</p>
+           
             <p style="margin-top: 20px; text-align: center; font-weight: bold; color: #d32f2f; font-size: 1.15rem;">
                 点击“同意并继续”即表示您已完整阅读并理解以上全部内容，并承诺不会将本页面用于任何违法、绕过限制或不当目的。
             </p>
@@ -278,13 +322,12 @@
         <div class="card">
             <div class="header">
                 <img src="https://img.feria.eu.org/xldn76.jpeg" alt="头像" class="avatar">
-                <button id="themeToggle" class="theme-toggle" title="切换深色/浅色模式">☀️</button>
+                <button id="themeToggle" class="theme-toggle" title="切换浅色/深色模式">☀️</button>
                 <h1 class="main-title">iOS小火箭美区免费ID</h1>
                 <h2 class="sub-title">资源汇总 · 安全可用</h2>
                 <p class="desc-text">精选可靠地址 | 优惠购买渠道 | 详细教程指引</p>
             </div>
 
-            <!-- 以下内容与上一个版本完全一致（超值推荐、主要地址、其他可用地址等） -->
             <h3 class="category-title">💎 超值推荐</h3>
             <div class="link-list">
                 <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fjbskleddjjctja%2F" target="_blank" class="link-item main">低价魔法推荐</a>
@@ -294,7 +337,7 @@
             <div class="link-list">
                 <a href="https://tgsss.com/AA123EB8" target="_blank" class="link-item main">TG低价账号推荐</a>
             </div>
-            <div class="link-desc">非广自用纯分享，T最近elegram纸飞机封号严重，加上大陆手机号注册困难，需要开通会员也不一定能收到验证码，太多人问有无渠道，特此提供靠谱购买渠道，我自己买的是加拿大的号，2025年6月份购买，目前依旧良好。</div>
+            <div class="link-desc">非广自用纯分享，T最近elegram纸飞机封号严重，加上大陆手机号注册困难，需要开通会员也不一定能收到验证码，太多人问有无渠道，特此提供靠谱购买渠道，我自己买的是加拿大的号，2025年6月份购买，目前依旧良好</div>
 
             <h3 class="category-title">🔰 主要使用地址</h3>
             <div class="link-list">
@@ -334,7 +377,6 @@
                 <a href="https://api.applefreeid.com/share/TcLhOgqskI" target="_blank" class="link-item">备用地址25（密码：123666）</a>
             </div>
 
-            <!-- 教程指引、小火箭之家、代理工具、粉丝群、购买渠道、优惠码等保持不变 -->
             <h3 class="category-title">📖 教程指引</h3>
             <div class="link-list">
                 <a href="https://s0.mall.tcl.com/group1/M00/00/89/CvoGBGd37jmAL0b-AE72lMZF4xc097.mp4" target="_blank" class="link-item">App Store登录ID视频教程</a>
@@ -386,7 +428,6 @@
             const savedTheme = localStorage.getItem('theme');
             const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-            // 设置初始主题
             function setTheme(theme) {
                 if (theme === 'dark') {
                     html.setAttribute('data-theme', 'dark');
@@ -397,14 +438,12 @@
                 }
             }
 
-            // 优先使用保存的偏好，否则跟随系统
             if (savedTheme) {
                 setTheme(savedTheme);
             } else {
                 setTheme(systemDark.matches ? 'dark' : 'light');
             }
 
-            // 切换按钮点击事件
             toggleBtn.addEventListener('click', () => {
                 const isDark = html.getAttribute('data-theme') === 'dark';
                 const newTheme = isDark ? 'light' : 'dark';
@@ -412,7 +451,6 @@
                 localStorage.setItem('theme', newTheme);
             });
 
-            // 监听系统主题变化（仅在没有手动设置时生效）
             systemDark.addEventListener('change', (e) => {
                 if (!localStorage.getItem('theme')) {
                     setTheme(e.matches ? 'dark' : 'light');
@@ -420,19 +458,21 @@
             });
         }
 
-        // 弹窗交互
+        // 弹窗交互（完全使用你原来的逻辑）
         document.getElementById('agree').addEventListener('click', function() {
             document.getElementById('disclaimerModal').style.display = 'none';
             document.getElementById('mainContent').style.display = 'block';
-            initTheme();   // 在主内容显示后初始化主题
+            initTheme();
         });
+
         document.getElementById('disagree').addEventListener('click', function() {
             document.body.innerHTML = '<div style="text-align:center; margin-top:200px; color:#d32f2f; font-size:2.5rem; font-weight:bold;">已取消访问<br><br>请关闭此页面</div>';
         });
 
-        // 优惠码复制
+        // 优惠码复制（修复版：只有点击后才显示成功提示）
         const couponCode = document.getElementById('couponCode');
         const copyTip = document.getElementById('copyTip');
+
         function copyToClipboard() {
             const tempInput = document.createElement('input');
             tempInput.value = couponCode.textContent;
@@ -440,12 +480,13 @@
             tempInput.select();
             document.execCommand('copy');
             document.body.removeChild(tempInput);
-         
+
             copyTip.classList.add('show');
             setTimeout(() => {
                 copyTip.classList.remove('show');
-            }, 3000);
+            }, 2500);
         }
+
         couponCode.addEventListener('click', copyToClipboard);
     </script>
 </body>
