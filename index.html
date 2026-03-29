@@ -36,7 +36,7 @@
             color: var(--text-main);
             min-height: 100vh;
             padding: 30px 20px;
-            transition: background 0.4 ease;
+            transition: background 0.4s ease;
         }
         .card {
             background: var(--card-bg);
@@ -48,7 +48,7 @@
             margin: 0 auto;
             position: relative;
             overflow: hidden;
-            transition: all 0.4 ease;
+            transition: all 0.4s ease;
         }
         .card::before {
             content: "";
@@ -79,7 +79,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3 ease;
+            transition: all 0.3s ease;
             z-index: 10;
         }
         .theme-toggle:hover {
@@ -160,7 +160,7 @@
             font-size: 16px;
             font-weight: 500;
             border: 1px solid var(--border-light);
-            transition: all 0.3 cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .link-item.main {
             background: linear-gradient(135deg, #9c27b0 0%, #ba6c8c 100%);
@@ -180,12 +180,12 @@
             background: #374151;
         }
         .link-desc {
-            font-size: 12px;          /* 调小字体 */
+            font-size: 12px;
             color: #7b1fa2;
             line-height: 1.5;
             margin-top: 8px;
             padding: 0 8px;
-            text-align: justify;      /* 两端对齐 */
+            text-align: justify;
         }
         [data-theme="dark"] .link-desc {
             color: #a5b4fc;
@@ -213,7 +213,7 @@
             background-color: var(--card-bg);
             border: 1px solid #e1bee7;
             display: inline-block;
-            transition: all 0.2 ease;
+            transition: all 0.2s ease;
         }
         [data-theme="dark"] .coupon-code {
             color: #e0bbff;
@@ -223,7 +223,7 @@
             color: #6a1b9a;
             margin-top: 8px;
             opacity: 0;
-            transition: opacity 0.3 ease;
+            transition: opacity 0.3s ease;
         }
         .copy-tip.show {
             opacity: 1;
@@ -251,7 +251,7 @@
             font-size: 11px;
             font-weight: 500;
             margin-top: 2px;
-            transition: all 0.2 ease;
+            transition: all 0.2s ease;
             cursor: pointer;
         }
         .download-btn:hover {
@@ -304,7 +304,7 @@
             border: none;
             border-radius: 12px;
             cursor: pointer;
-            transition: all 0.3;
+            transition: all 0.3s;
             min-width: 180px;
         }
         #agree {
@@ -324,7 +324,7 @@
     </style>
 </head>
 <body>
-    <!-- 重要免责弹窗（保持完全不变） -->
+    <!-- 重要免责弹窗（保持不变） -->
     <div class="modal" id="disclaimerModal">
         <div class="modal-content">
             <h2>重要免责声明（必须阅读）</h2>
@@ -368,7 +368,7 @@
             <div class="link-list">
                 <a href="https://tgsss.com/AA123EB8" target="_blank" class="link-item main">TG低价账号推荐</a>
             </div>
-            <div class="link-desc">非广自用纯分享，今年elegram纸飞机改了很多规则，封号特别严重，加上大陆手机号注册困难，需要开通会员也不一定能收到验证码，太多人问有无渠道，特此提供靠谱购买渠道，我自己买的是加拿大的号，2025年6月份购买，目前依旧良好。</div>
+            <div class="link-desc">非广自用纯分享，Telegram纸飞机封号严重，提供靠谱购买渠道。</div>
 
             <h3 class="category-title">🔰 主要使用地址</h3>
             <div class="link-list">
@@ -381,31 +381,31 @@
 打开 AppStore → 点击头像 → 底部退出登录 → 复制共享账号密码登录 → 点击“其他选项-不升级” → 搜索并下载：<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" class="download-btn">Shadowrocket</a> → 用完务必“退出登录”防止锁机
             </div>
             <div class="link-list">
-                <a href="https://id.jincaii.com" target="_blank" class="link-item">备用地址1</a>
-                <a href="https://ids.ailiao.eu/" target="_blank" class="link-item">备用地址2</a>
-                <a href="https://id.bocchi.vip/" target="_blank" class="link-item">备用地址3</a>
-                <a href="https://idfree.top/" target="_blank" class="link-item">备用地址4</a>
-                <a href="https://defuid.nb666666.com/share/lj66" target="_blank" class="link-item">备用地址5</a>
-                <a href="https://ios.juzixp.com/" target="_blank" class="link-item">备用地址6</a>
-                <a href="https://applc.cc/h/888" target="_blank" class="link-item">备用地址7</a>
-                <a href="https://id.meiquid.top" target="_blank" class="link-item">备用地址8</a>
-                <a href="https://66fk.top/" target="_blank" class="link-item">备用地址9</a>
-                <a href="https://proxy6.zzux.com" target="_blank" class="link-item">备用地址10</a>
-                <a href="https://da1ph.sha.cx/38804d38dd8e2c1854ee10ee31e266ef" target="_blank" class="link-item">备用地址11</a>
-                <a href="https://a.c98.eu/" target="_blank" class="link-item">备用地址12</a>
-                <a href="https://j31ov.sha.cx/7fbd6dc56973544e8a8a4ee23a9b0ec4" target="_blank" class="link-item">备用地址13</a>
-                <a href="https://l2666.sha.cx/6a818d05ae2377503af263e877e1a91e" target="_blank" class="link-item">备用地址14</a>
-                <a href="https://ccbaohe.com/appleID/" target="_blank" class="link-item">备用地址15</a>
-                <a href="https://idusr.com" target="_blank" class="link-item">备用地址16</a>
-                <a href="https://appi.lol" target="_blank" class="link-item">备用地址17</a>
-                <a href="https://best.iwanshare.club" target="_blank" class="link-item">备用地址18</a>
-                <a href="https://best.iwanshare.club/acc1.html" target="_blank" class="link-item">备用地址19</a>
-                <a href="https://free.shadowrocket.online" target="_blank" class="link-item">备用地址20</a>
-                <a href="https://www.lanhaiblog.com/post/3.html" target="_blank" class="link-item">备用地址21</a>
-                <a href="https://www.fengche666.net/doc/1642" target="_blank" class="link-item">备用地址22</a>
-                <a href="https://wukongdy15.top" target="_blank" class="link-item">备用地址23</a>
-                <a href="https://www.appstore.autos" target="_blank" class="link-item">备用地址24</a>
-                <a href="https://api.applefreeid.com/share/TcLhOgqskI" target="_blank" class="link-item">备用地址25（密码：123666）</a>
+                <a href="https://id.jincaii.com" target="_blank" class="link-item">其他可用地址1</a>
+                <a href="https://ids.ailiao.eu/" target="_blank" class="link-item">其他可用地址2</a>
+                <a href="https://id.bocchi.vip/" target="_blank" class="link-item">其他可用地址3</a>
+                <a href="https://idfree.top/" target="_blank" class="link-item">其他可用地址4</a>
+                <a href="https://defuid.nb666666.com/share/lj66" target="_blank" class="link-item">其他可用地址5</a>
+                <a href="https://ios.juzixp.com/" target="_blank" class="link-item">其他可用地址6</a>
+                <a href="https://applc.cc/h/888" target="_blank" class="link-item">其他可用地址7</a>
+                <a href="https://id.meiquid.top" target="_blank" class="link-item">其他可用地址8</a>
+                <a href="https://66fk.top/" target="_blank" class="link-item">其他可用地址9</a>
+                <a href="https://proxy6.zzux.com" target="_blank" class="link-item">其他可用地址10</a>
+                <a href="https://da1ph.sha.cx/38804d38dd8e2c1854ee10ee31e266ef" target="_blank" class="link-item">其他可用地址11</a>
+                <a href="https://a.c98.eu/" target="_blank" class="link-item">其他可用地址12</a>
+                <a href="https://j31ov.sha.cx/7fbd6dc56973544e8a8a4ee23a9b0ec4" target="_blank" class="link-item">其他可用地址13</a>
+                <a href="https://l2666.sha.cx/6a818d05ae2377503af263e877e1a91e" target="_blank" class="link-item">其他可用地址14</a>
+                <a href="https://ccbaohe.com/appleID/" target="_blank" class="link-item">其他可用地址15</a>
+                <a href="https://idusr.com" target="_blank" class="link-item">其他可用地址16</a>
+                <a href="https://appi.lol" target="_blank" class="link-item">其他可用地址17</a>
+                <a href="https://best.iwanshare.club" target="_blank" class="link-item">其他可用地址18</a>
+                <a href="https://best.iwanshare.club/acc1.html" target="_blank" class="link-item">其他可用地址19</a>
+                <a href="https://free.shadowrocket.online" target="_blank" class="link-item">其他可用地址20</a>
+                <a href="https://www.lanhaiblog.com/post/3.html" target="_blank" class="link-item">其他可用地址21</a>
+                <a href="https://www.fengche666.net/doc/1642" target="_blank" class="link-item">其他可用地址22</a>
+                <a href="https://wukongdy15.top" target="_blank" class="link-item">其他可用地址23</a>
+                <a href="https://www.appstore.autos" target="_blank" class="link-item">其他可用地址24</a>
+                <a href="https://api.applefreeid.com/share/TcLhOgqskI" target="_blank" class="link-item">其他可用地址25（密码：123666）</a>
             </div>
 
             <h3 class="category-title">📖 教程指引</h3>
