@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iOS小火箭美区免费ID | 小姬资源</title>
     <style>
-        /* 原有所有样式保持完全不变 */
         * {
             margin: 0;
             padding: 0;
@@ -101,7 +100,7 @@
             font-size: 11px;
             font-weight: 500;
             margin-top: 2px;
-            transition: all 0.2 ease;
+            transition: all 0.2s ease;
             cursor: pointer;
         }
         .download-btn:hover {
@@ -127,7 +126,7 @@
             font-size: 16px;
             font-weight: 500;
             border: 1px solid #e1bee7;
-            transition: all 0.3 cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
@@ -148,7 +147,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(156, 39, 176, 0.08), transparent);
-            transition: left 0.6 ease;
+            transition: left 0.6s ease;
         }
         .link-item:hover {
             background: #faf0fc;
@@ -186,7 +185,7 @@
             background-color: #ffffff;
             border: 1px solid #e1bee7;
             display: inline-block;
-            transition: all 0.2 ease;
+            transition: all 0.2s ease;
         }
         .coupon-code:hover {
             background-color: #f3e5f5;
@@ -197,7 +196,7 @@
             color: #6a1b9a;
             margin-top: 8px;
             opacity: 0;
-            transition: opacity 0.3 ease;
+            transition: opacity 0.3s ease;
         }
         .copy-tip.show {
             opacity: 1;
@@ -229,38 +228,15 @@
             border-top: 1px solid #f8f0fa;
         }
         @media (max-width: 450px) {
-            .card {
-                padding: 35px 25px;
-            }
-            .avatar {
-                width: 70px;
-                height: 70px;
-            }
-            .main-title {
-                font-size: 22px;
-            }
-            .link-item {
-                padding: 16px 18px;
-                font-size: 15px;
-            }
-            .coupon-code {
-                font-size: 18px;
-            }
-            .link-desc {
-                font-size: 11px;
-                padding: 6px 10px;
-            }
-            .operation-note {
-                font-size: 11px;
-                padding: 12px 15px;
-            }
-            .download-btn {
-                padding: 5px 10px;
-                font-size: 10px;
-            }
+            .card { padding: 35px 25px; }
+            .avatar { width: 70px; height: 70px; }
+            .main-title { font-size: 22px; }
+            .link-item { padding: 16px 18px; font-size: 15px; }
+            .coupon-code { font-size: 18px; }
+            .link-desc { font-size: 11px; padding: 6px 10px; }
+            .operation-note { font-size: 11px; padding: 12px 15px; }
+            .download-btn { padding: 5px 10px; font-size: 10px; }
         }
-
-        /* 新增弹窗样式 */
         .modal {
             position: fixed;
             inset: 0;
@@ -312,7 +288,7 @@
             border: none;
             border-radius: 12px;
             cursor: pointer;
-            transition: all 0.3;
+            transition: all 0.3s;
             min-width: 180px;
         }
         #agree {
@@ -331,7 +307,6 @@
             background-color: #d32f2f;
             transform: translateY(-2px);
         }
-
         @media (max-width: 600px) {
             .modal-content { padding: 24px 18px; }
             .modal-buttons { flex-direction: column; gap: 12px; }
@@ -339,25 +314,18 @@
     </style>
 </head>
 <body>
-
     <!-- 免责弹窗 -->
     <div class="modal" id="disclaimerModal">
         <div class="modal-content">
             <h2>重要免责声明（必须阅读）</h2>
             <p>1. 本页面提供的Apple ID共享信息、下载指引、链接等内容均来源于互联网公开渠道，<strong>仅供个人学习、技术测试、资料查阅之用，不构成任何账号交易、服务提供或使用推荐</strong>。</p>
-            
             <p>2. 本人<strong>不运营、不销售、不代理、不维护</strong>任何Apple ID、代理工具、翻墙软件或相关服务，<strong>未从中获取任何经济利益</strong>，也<strong>不参与任何形式的商业推广或盈利行为</strong>。</p>
-            
-            <p>3. 中华人民共和国法律法规明确禁止未经许可提供、传播、销售翻墙工具、国际联网代理服务、共享账号绕过地区限制等行为（详见《网络安全法》《计算机信息网络国际联网管理暂行规定》等）。本人<strong>强烈反对、坚决不鼓励、不支持</strong>任何违反中国法律法规的行为。</p>
-            
+            <p>3. 中华人民共和国法律法规明确禁止未经许可提供、传播、销售翻墙工具、国际联网代理服务、共享账号绕过地区限制等行为。本人<strong>强烈反对、坚决不鼓励、不支持</strong>任何违反中国法律法规的行为。</p>
             <p>4. 共享Apple ID存在锁机、封号、隐私泄露等重大风险。访问者必须自行判断所有信息的合法性、安全性及可用性，并<strong>严格遵守所在地全部法律法规</strong>。</p>
-            
             <p>5. 任何因登录、使用、下载、导入本页面提供的ID、软件、链接而产生的法律责任、行政处罚、经济损失、账号异常、设备损坏、个人信息泄露或其他任何后果，<strong>全部由使用者本人自行承担，与本页面及维护者完全无关</strong>。</p>
-            
             <p style="margin-top: 20px; text-align: center; font-weight: bold; color: #d32f2f; font-size: 1.15rem;">
                 点击“同意并继续”即表示您已完整阅读并理解以上全部内容，并承诺不会将本页面用于任何违法、绕过限制或不当目的。
             </p>
-
             <div class="modal-buttons">
                 <button id="agree" class="modal-btn">同意并继续</button>
                 <button id="disagree" class="modal-btn">不同意，离开</button>
@@ -365,85 +333,103 @@
         </div>
     </div>
 
-    <!-- 原页面内容（先隐藏） -->
+    <!-- 主内容 -->
     <div id="mainContent" style="display:none;">
         <div class="card">
             <div class="header">
-                <img src="https://i2.qyimage.store:2999/i/bbae75fed77149fe" alt="头像" class="avatar">
+                <img src="https://img.feria.eu.org/xldn76.jpeg" alt="头像" class="avatar">
                 <h1 class="main-title">iOS小火箭美区免费ID</h1>
                 <h2 class="sub-title">资源汇总 · 安全可用</h2>
-                <p class="desc-text">精选可靠地址 | 优惠购买渠道 | 详细教程指引 </p>
+                <p class="desc-text">精选可靠地址 | 优惠购买渠道 | 详细教程指引</p>
             </div>
+
             <h3 class="category-title">💎 超值推荐</h3>
             <div class="link-list">
                 <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fjbskleddjjctja%2F" target="_blank" class="link-item main">低价魔法推荐</a>
             </div>
             <div class="link-desc">3年老魔法，新加坡团队合法运营，13.9每月，每月150G大流量，五台设备同时在线。</div>
+
             <div class="link-list">
                 <a href="https://tgsss.com/AA123EB8" target="_blank" class="link-item main">TG低价账号推荐</a>
             </div>
-            <div class="link-desc">非广自用纯分享，最近Telegram纸飞机封号严重，而且国内新用户注册收不到验证码，提供一个靠谱的购买渠道，我自己买的是加拿大的账号，一年多了目前还在用。</div>
+            <div class="link-desc">非广自用纯分享，Telegram纸飞机封号严重，提供靠谱购买渠道。</div>
+
             <h3 class="category-title">🔰 主要使用地址</h3>
             <div class="link-list">
                 <a href="https://fxapp.xyz" target="_blank" class="link-item main">主要地址（浏览器打开）</a>
             </div>
-            <h3 class="category-title">🌐 其他可用地址</h3>
+
+            <h3 class="category-title">🌐 其他可用地址（26个）</h3>
             <div class="operation-note">
 操作注意事项：
-打开 AppStore→点击 头像 -> 底部 退出登录→复制 共享账号密码 登录→点击 “其他选项-不升级”→搜索并下载：<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" class="download-btn">Shadowrocket下载</a>→用完务必“退出登录”防止锁机
+打开 AppStore → 点击头像 → 底部退出登录 → 复制共享账号密码登录 → 点击“其他选项-不升级” → 搜索并下载 Shadowrocket → 用完务必“退出登录”防止锁机
             </div>
             <div class="link-list">
-                <a href="https://id.jincaii.com" target="_blank" class="link-item">备用地址1</a>
-                <a href="https://ids.ailiao.eu/" target="_blank" class="link-item">备用地址2</a>
-                <a href="https://id.bocchi.vip/" target="_blank" class="link-item">备用地址3</a>
-                <a href="https://idfree.top/" target="_blank" class="link-item">备用地址4</a>
-                <a href="https://defuid.nb666666.com/share/lj66" target="_blank" class="link-item">备用地址5</a>
-                <a href="https://ios.juzixp.com/" target="_blank" class="link-item">备用地址6</a>
-                <a href="https://applc.cc/h/888" target="_blank" class="link-item">备用地址7</a>
-                <a href="https://id.meiquid.top" target="_blank" class="link-item">备用地址8</a>
-                <a href="https://66fk.top/" target="_blank" class="link-item">备用地址9</a>
-                <a href="https://proxy6.zzux.com" target="_blank" class="link-item">备用地址10</a>
-                <a href="https://da1ph.sha.cx/38804d38dd8e2c1854ee10ee31e266ef" target="_blank" class="link-item">备用地址11</a>
-                <a href="https://a.c98.eu/" target="_blank" class="link-item">备用地址12</a>
-                <a href="https://j31ov.sha.cx/7fbd6dc56973544e8a8a4ee23a9b0ec4" target="_blank" class="link-item">备用地址13</a>
-                <a href="https://l2666.sha.cx/6a818d05ae2377503af263e877e1a91e" target="_blank" class="link-item">备用地址14</a>
-                <a href="https://api.applefreeid.com/share/TcLhOgqskI" target="_blank" class="link-item">备用地址15</a>
-                <div class="link-note">备用地址15密码：123666</div>
-                <a href="https://ccbaohe.com/appleID/" target="_blank" class="link-item">备用地址16</a>
-                <a href="https://idusr.com" target="_blank" class="link-item">备用地址17</a>
+                <a href="https://fxapp.xyz" target="_blank" class="link-item">1. fxapp.xyz（主要地址）</a>
+                <a href="https://id.jincaii.com" target="_blank" class="link-item">2. id.jincaii.com</a>
+                <a href="https://ids.ailiao.eu/" target="_blank" class="link-item">3. ids.ailiao.eu</a>
+                <a href="https://id.bocchi.vip/" target="_blank" class="link-item">4. id.bocchi.vip</a>
+                <a href="https://idfree.top/" target="_blank" class="link-item">5. idfree.top</a>
+                <a href="https://defuid.nb666666.com/share/lj66" target="_blank" class="link-item">6. defuid.nb666666.com/share/lj66</a>
+                <a href="https://ios.juzixp.com/" target="_blank" class="link-item">7. ios.juzixp.com</a>
+                <a href="https://applc.cc/h/888" target="_blank" class="link-item">8. applc.cc/h/888</a>
+                <a href="https://id.meiquid.top" target="_blank" class="link-item">9. id.meiquid.top</a>
+                <a href="https://66fk.top/" target="_blank" class="link-item">10. 66fk.top</a>
+                <a href="https://proxy6.zzux.com" target="_blank" class="link-item">11. proxy6.zzux.com</a>
+                <a href="https://da1ph.sha.cx/38804d38dd8e2c1854ee10ee31e266ef" target="_blank" class="link-item">12. da1ph.sha.cx/...</a>
+                <a href="https://a.c98.eu/" target="_blank" class="link-item">13. a.c98.eu</a>
+                <a href="https://j31ov.sha.cx/7fbd6dc56973544e8a8a4ee23a9b0ec4" target="_blank" class="link-item">14. j31ov.sha.cx/...</a>
+                <a href="https://l2666.sha.cx/6a818d05ae2377503af263e877e1a91e" target="_blank" class="link-item">15. l2666.sha.cx/...</a>
+                <a href="https://api.applefreeid.com/share/TcLhOgqskI" target="_blank" class="link-item">16. api.applefreeid.com/share/TcLhOgqskI（密码：123666）</a>
+                <a href="https://ccbaohe.com/appleID/" target="_blank" class="link-item">17. ccbaohe.com/appleID</a>
+                <a href="https://idusr.com" target="_blank" class="link-item">18. idusr.com</a>
+                <a href="https://appi.lol" target="_blank" class="link-item">19. appi.lol</a>
+                <a href="https://best.iwanshare.club" target="_blank" class="link-item">20. best.iwanshare.club</a>
+                <a href="https://best.iwanshare.club/acc1.html" target="_blank" class="link-item">21. best.iwanshare.club/acc1.html</a>
+                <a href="https://free.shadowrocket.online" target="_blank" class="link-item">22. free.shadowrocket.online</a>
+                <a href="https://www.lanhaiblog.com/post/3.html" target="_blank" class="link-item">23. www.lanhaiblog.com/post/3.html</a>
+                <a href="https://www.fengche666.net/doc/1642" target="_blank" class="link-item">24. www.fengche666.net/doc/1642</a>
+                <a href="https://wukongdy15.top" target="_blank" class="link-item">25. wukongdy15.top</a>
+                <a href="https://www.appstore.autos" target="_blank" class="link-item">26. www.appstore.autos</a>
             </div>
+
             <h3 class="category-title">📖 教程指引</h3>
             <div class="link-list">
                 <a href="https://s0.mall.tcl.com/group1/M00/00/89/CvoGBGd37jmAL0b-AE72lMZF4xc097.mp4" target="_blank" class="link-item">App Store登录ID视频教程</a>
                 <a href="https://www.yuque.com/u22214150/tc3ykg/vlt36mvd0z421et2?#" target="_blank" class="link-item">美区ID注册详细教程</a>
             </div>
+
             <h3 class="category-title">🚀 iOS小火箭之家</h3>
             <div class="link-list">
                 <a href="https://lowertop.dpdns.org/" target="_blank" class="link-item">小火箭配置文件/模块/规则/脚本/主题</a>
                 <a href="https://lowertop.github.io/Shadowrocket/" target="_blank" class="link-item">最完善小火箭使用手册</a>
             </div>
-            <!-- 新增部分：代理软件下载合集 & 永久订阅 -->
+
             <h3 class="category-title">🛠️ 代理工具 & 免费订阅</h3>
             <div class="link-list">
                 <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fdlrjxzjbks%2F" target="_blank" class="link-item main">代理软件下载合集</a>
                 <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2Fjbksdyjdyfb%2F" target="_blank" class="link-item main">小姬永久免费订阅</a>
             </div>
-            <div class="link-desc">iOS/Android/PC全平台代理客户端下载 + 小姬长期有效免费节点订阅，一键导入V2rayNG/Shadowrocket等使用</div>
+            <div class="link-desc">iOS/Android/PC全平台代理客户端下载 + 小姬长期有效免费节点订阅，一键导入使用</div>
+
             <h3 class="category-title">👥 粉丝交流群</h3>
             <div class="link-list">
                 <a href="https://t.me/jbksjl" target="_blank" class="link-item main">TG粉丝群 @jbksjl</a>
                 <a href="https://proxy.edgeone.pp.ua/proxy?url=https%3A%2F%2Fl406426025-cmd.github.io%2F" target="_blank" class="link-item main">小姬资源仓库</a>
             </div>
+
             <h3 class="category-title">💳 购买渠道（专属优惠）</h3>
             <div class="link-list">
                 <a href="https://universalbus.cn/?s=9s0Ppp7tgR" target="_blank" class="link-item">ID成品号购买渠道</a>
             </div>
+
             <div class="coupon-box">
                 <div class="coupon-title">小姬专属优惠码</div>
                 <div class="coupon-code" id="couponCode">JBKSLE</div>
                 <div class="copy-tip" id="copyTip">✅ 复制成功！</div>
                 <div class="coupon-title" style="margin-top: 8px; font-size: 13px;">下单立享9折优惠 ✨</div>
             </div>
+
             <div class="footer">
                 小姬资源 | 仅供学习交流使用 | 收藏备用不迷路
             </div>
@@ -451,17 +437,16 @@
     </div>
 
     <script>
-        // 弹窗交互逻辑
+        // 弹窗交互
         document.getElementById('agree').addEventListener('click', function() {
             document.getElementById('disclaimerModal').style.display = 'none';
             document.getElementById('mainContent').style.display = 'block';
         });
-
         document.getElementById('disagree').addEventListener('click', function() {
             document.body.innerHTML = '<div style="text-align:center; margin-top:200px; color:#d32f2f; font-size:2.5rem; font-weight:bold;">已取消访问<br><br>请关闭此页面</div>';
         });
 
-        // 原有优惠码复制脚本（完全不变）
+        // 优惠码复制
         const couponCode = document.getElementById('couponCode');
         const copyTip = document.getElementById('copyTip');
         function copyToClipboard() {
@@ -471,7 +456,7 @@
             tempInput.select();
             document.execCommand('copy');
             document.body.removeChild(tempInput);
-          
+         
             copyTip.classList.add('show');
             setTimeout(() => {
                 copyTip.classList.remove('show');
