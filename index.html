@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>iOS小火箭美区免费ID | 小姬资源</title>
     <style>
         :root {
@@ -179,6 +179,17 @@
         [data-theme="dark"] .link-item:hover {
             background: #374151;
         }
+        .link-desc {
+            font-size: 12px;          /* 调小字体 */
+            color: #7b1fa2;
+            line-height: 1.5;
+            margin-top: 8px;
+            padding: 0 8px;
+            text-align: justify;      /* 两端对齐 */
+        }
+        [data-theme="dark"] .link-desc {
+            color: #a5b4fc;
+        }
         .coupon-box {
             text-align: center;
             padding: 20px;
@@ -229,10 +240,30 @@
             color: #6b7280;
             border-top-color: #374151;
         }
+        .download-btn {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #ffffff;
+            color: #9c27b0;
+            border: 1px solid #9c27b0;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 2px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background: #f3e5f5;
+            border-color: #8e24aa;
+            transform: translateY(-1px);
+        }
         @media (max-width: 450px) {
             .card { padding: 35px 25px; }
             .avatar { width: 70px; height: 70px; }
             .main-title { font-size: 22px; }
+            .link-item { padding: 16px 18px; font-size: 15px; }
         }
         .modal {
             position: fixed;
@@ -293,7 +324,7 @@
     </style>
 </head>
 <body>
-    <!-- 重要免责弹窗（完全保持你原来的样式和按钮） -->
+    <!-- 重要免责弹窗（保持完全不变） -->
     <div class="modal" id="disclaimerModal">
         <div class="modal-content">
             <h2>重要免责声明（必须阅读）</h2>
@@ -337,7 +368,7 @@
             <div class="link-list">
                 <a href="https://tgsss.com/AA123EB8" target="_blank" class="link-item main">TG低价账号推荐</a>
             </div>
-            <div class="link-desc">非广自用纯分享，T最近elegram纸飞机封号严重，加上大陆手机号注册困难，需要开通会员也不一定能收到验证码，太多人问有无渠道，特此提供靠谱购买渠道，我自己买的是加拿大的号，2025年6月份购买，目前依旧良好</div>
+            <div class="link-desc">非广自用纯分享，Telegram纸飞机封号严重，提供靠谱购买渠道。</div>
 
             <h3 class="category-title">🔰 主要使用地址</h3>
             <div class="link-list">
@@ -346,8 +377,8 @@
 
             <h3 class="category-title">🌐 其他可用地址</h3>
             <div class="operation-note">
-操作注意事项：
-打开 AppStore → 点击头像 → 底部退出登录 → 复制共享账号密码登录 → 点击“其他选项-不升级” → 搜索并下载 Shadowrocket → 用完务必“退出登录”防止锁机
+操作注意事项：<br>
+打开 AppStore → 点击头像 → 底部退出登录 → 复制共享账号密码登录 → 点击“其他选项-不升级” → 搜索并下载：<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" class="download-btn">Shadowrocket</a> → 用完务必“退出登录”防止锁机
             </div>
             <div class="link-list">
                 <a href="https://id.jincaii.com" target="_blank" class="link-item">备用地址1</a>
@@ -458,7 +489,7 @@
             });
         }
 
-        // 弹窗交互（完全使用你原来的逻辑）
+        // 弹窗交互
         document.getElementById('agree').addEventListener('click', function() {
             document.getElementById('disclaimerModal').style.display = 'none';
             document.getElementById('mainContent').style.display = 'block';
@@ -469,7 +500,7 @@
             document.body.innerHTML = '<div style="text-align:center; margin-top:200px; color:#d32f2f; font-size:2.5rem; font-weight:bold;">已取消访问<br><br>请关闭此页面</div>';
         });
 
-        // 优惠码复制（修复版：只有点击后才显示成功提示）
+        // 优惠码复制
         const couponCode = document.getElementById('couponCode');
         const copyTip = document.getElementById('copyTip');
 
@@ -486,7 +517,6 @@
                 copyTip.classList.remove('show');
             }, 2500);
         }
-
         couponCode.addEventListener('click', copyToClipboard);
     </script>
 </body>
